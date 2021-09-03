@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "studying"
 include ':app'
+include ':step01row'
