@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/step01row" />
             <option value="$PROJECT_DIR$/step02column" />
+            <option value="$PROJECT_DIR$/step03box" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
