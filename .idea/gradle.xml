@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/step02column" />
             <option value="$PROJECT_DIR$/step03box" />
             <option value="$PROJECT_DIR$/step04boxwithconstraints" />
+            <option value="$PROJECT_DIR$/step05shape" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
