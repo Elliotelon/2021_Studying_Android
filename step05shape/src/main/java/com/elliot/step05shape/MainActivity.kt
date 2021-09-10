@@ -1,20 +1,53 @@
 package com.elliot.step05shape
 
+
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.ClickableText
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.geometry.center
+import androidx.compose.ui.graphics.*
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.*
+import kotlin.math.cos
+import kotlin.math.sin
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.elliot.step05shape.ui.theme.StudyingTheme
+import kotlin.random.Random
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Compose_fundamental_tutorialTheme {
+            StudyingTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
 //                    Greeting("Android")
@@ -185,7 +218,7 @@ fun TextContainer() {
 
     val scrollState = rememberScrollState()
 
-    var words = stringResource(id = R.string.dummy_short_text)
+    var words = stringResource(id = R.string.dummy_long_text2)
     var wordsArray = words.split(" ")
 
 
@@ -220,7 +253,7 @@ fun TextContainer() {
                 .fillMaxWidth()
                 .background(Color.Yellow)
         )
-        Text(text = stringResource(id = R.string.dummy_short_text),
+        Text(text = stringResource(id = R.string.dummy_long_text2),
             maxLines = 3,
             overflow = TextOverflow.Ellipsis,
             style = TextStyle(
@@ -239,12 +272,10 @@ fun TextContainer() {
                 .fillMaxWidth()
                 .background(Color.Yellow)
         )
-        Text(text = stringResource(id = R.string.dummy_short_text),
+        Text(text = stringResource(id = R.string.dummy_long_text2),
             style = TextStyle(
                 textAlign = TextAlign.Start,
-                fontFamily = FontFamily(Font(R.font.cafe24, weight = FontWeight.ExtraBold)),
-                lineHeight = 40.sp
-            ),
+                lineHeight = 40.sp),
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.Yellow)
@@ -285,7 +316,7 @@ fun TextContainer() {
             Log.d("TAG", "TextContainer: 클릭미가 클릭되었다!")
         })
 
-        Text(text = stringResource(id = R.string.dummy_long_text),
+        Text(text = stringResource(id = R.string.dummy_long_text2),
             style = TextStyle(lineHeight = 20.sp)
         )
 
@@ -395,7 +426,7 @@ fun Path.polygon(sides: Int, radius: Float, center: Offset) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    Compose_fundamental_tutorialTheme {
+    StudyingTheme {
         ShapeContainer()
 //        Container()
 //        Greeting("Android")
