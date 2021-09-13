@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/step05shape" />
             <option value="$PROJECT_DIR$/step06text" />
             <option value="$PROJECT_DIR$/step07button" />
+            <option value="$PROJECT_DIR$/step08checkbox" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
